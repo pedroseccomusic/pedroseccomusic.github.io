@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth; 
+}
+
 /* fonte local */
 @font-face {
     font-family: 'Right Melody';
@@ -40,7 +44,19 @@ body {
 
 header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px 20px;
+    background-color: var(--bordo);
+}
+
+.secao-padding {
+    padding: 2rem 2rem; 
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .secao-padding {
+        padding: 2rem 1.5rem;
+    }
 }
 
 .logo {
@@ -48,13 +64,14 @@ header {
     font-size: 5rem; 
     font-weight: normal;
     margin-bottom: 10px;
-    color: var(--bordo);
+    color: var(--dourado);
 }
 
 .subtitulo {
     font-style: italic; 
     font-size: 1.2rem;
     letter-spacing: 2px;
+    color: var(--begezinho);
 }
 
 .fundo-alternativo {
@@ -68,14 +85,13 @@ header {
 .titulo-secao {
     color: var(--bordo);
     text-align: center;
-    margin-bottom: 2rem;
     font-size: 2.5rem;
 }
 
 /* BOTÕES */
 .btn {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 6px 24px;
     border: 1px solid var(--bordo);
     color: var(--bordo);
     text-decoration: none;
@@ -87,8 +103,97 @@ header {
     color: var(--clarinho);
 }
 
+.btn-youtube {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 8px 16px;
+    background-color: var(--bordo);
+    color: var(--clarinho);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
 
-/* Organiza os arranjos em um Grid (lado a lado no PC, um embaixo do outro no celular) */
+.btn-youtube:hover {
+    background-color: var(--vermelho);
+}
+
+.botoes-ancora {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--bordo);
+    color: var(--clarinho);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+.btn-topo.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-topo:hover {
+    transform: translateY(-5px);
+    background-color: var(--vermelho);
+}
+
+.botoes-contato {
+    margin-bottom: 1rem;
+}
+
+.btn-primario {
+    background-color: var(--begezinho);
+    color: var(--bordo);
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primario:hover {
+    background-color: #fff; 
+    transform: scale(1.05);
+}
+
+.btn-rodape {
+    display: inline-block;
+    padding: 6px 24px;
+    border: 1px solid rgba(243, 238, 217, 0.7);
+    color: rgba(243, 238, 217, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-rodape:hover {
+    background-color: var(--bordo);
+    color: var(--clarinho);
+}
+
+/* ARRANJOS */
 .lista-arranjos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -96,6 +201,7 @@ header {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
 }
 
 /* cartão individual de cada arranjo */
@@ -110,14 +216,6 @@ header {
 
 .item-arranjo:hover {
     transform: translateY(-5px);
-}
-
-/* imagem da partitura */
-.imagem-partitura img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid var(--dourado);
 }
 
 /* bloco de texto e player */
@@ -135,4 +233,298 @@ header {
     width: 100%;
     margin-top: 1rem;
     outline: none;
+}
+
+.imagem-partitura {
+    position: relative; 
+    width: 100%;
+}
+
+.imagem-partitura img {
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid var(--dourado);
+}
+.overlay-pdf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 2, 2, 0.85); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-arranjo:hover .overlay-pdf {
+    opacity: 1;
+}
+
+.overlay-pdf span {
+    color: var(--begezinho);
+    font-family: var(--fonte-texto);
+    font-size: 1.2rem;
+    font-style: italic;
+    border: 1px solid var(--begezinho);
+    padding: 12px 24px;
+    background-color: transparent; 
+    white-space: nowrap; 
+}
+
+
+/* SOBRE */
+.vh-100 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clarinho);
+}
+
+.metade-slideshow {
+    flex: 1; 
+    position: relative; 
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.ativo {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .vh-100 {
+        flex-direction: column-reverse; 
+        height: auto; 
+        min-height: 100vh;
+    }
+
+    .metade-slideshow {
+        min-height: 50vh; 
+        width: 100%;
+    }
+
+    .conteudo-sobre {
+        padding: 4rem 20px;
+    }
+}
+
+
+.conteudo-sobre {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 0 5%;
+    text-align: justify;
+}
+
+
+
+/* PERFORMANCES */
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* cartão de cada vídeo */
+.video-card {
+    background-color: var(--clarinho);
+    border: 1px solid var(--vermelho-claro);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.wrapper-iframe {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    border-bottom: 2px solid var(--dourado);
+}
+
+.wrapper-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.info-video {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.titulo-video {
+    color: var(--bordo);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* video destaque */
+@media (min-width: 900px) {
+    .video-card:first-child {
+        grid-column: span 2; 
+    }
+    
+    .video-card:first-child .titulo-video {
+        font-size: 2rem; 
+    }
+}
+
+
+
+/* UNDERSCORING */
+.playlist-library {
+    max-width: 900px; 
+    margin: 2rem auto 1rem auto;
+    padding: 1rem 20px;
+}
+
+.playlist-uptb {
+    max-width: 900px; 
+    margin: 2rem auto 1rem auto;
+    padding: 1rem 20px;
+}
+.texto-centralizado {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.item-trilha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--clarinho);
+    border: 1px solid var(--vermelho-claro);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.item-trilha:hover {
+    transform: translateX(10px); 
+    border-color: var(--bordo);
+}
+
+.info-trilha {
+    flex: 1; 
+}
+
+.info-trilha h3 {
+    color: var(--bordo);
+    margin-bottom: 0.2rem;
+}
+
+.info-trilha p {
+    font-size: 0.9rem;
+    color: var(--preto-grafite);
+}
+
+.player-trilha {
+    width: 300px;
+    margin-left: 2rem;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .item-trilha {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+    
+    .player-trilha {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.underscore-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.underscore-text{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* CONTATO */
+.bg-escuro {
+    background-color: var(--bordo); 
+    color: var(--clarinho);
+}
+
+.container-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-secao.claro {
+    color: var(--begezinho);
+}
+
+.texto-contato {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+}
+
+.redes-sociais a {
+    color: var(--begezinho);
+    text-decoration: none;
+    font-size: 2.2rem; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #fff;
+    transform: translateY(-5px); 
+}
+
+.rodape {
+    background-color: #380101; 
+    color: rgba(243, 238, 217, 0.7);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
 }
