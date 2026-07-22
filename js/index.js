@@ -6,7 +6,7 @@ const iniciarSlideshow = () => {
         "../assets/photos/23.jpg",
         "../assets/photos/1.JPG",
         "../assets/photos/18.jpg",
-        "../assets/photos/7.jpg",
+        "../assets/photos/21.jpg",
         "../assets/photos/11.JPG",
         "../assets/photos/19.jpg",
         "../assets/photos/3.jpg",
@@ -254,13 +254,13 @@ const libraryData = [
         titulo: "The Breakup (Lite Version)",
         descricao: "Less dense version of 'The Breakup'",
         audio: "../assets/audio/MenegattiSecco_TheBreakup_AltLite.mp3"
-    },
-    {
+    }
+    /*{
         id: 4,
         titulo: "Action",
         descricao: "This cue represents action with suspenseful elements.",
         audio: "#"
-    }
+    } */
 ];
 
 const renderizarLibrary = () => {
@@ -290,19 +290,19 @@ const uptbData = [
     {
         id: 1,
         titulo: "Jazz",
-        descricao: "lorem ipsum",
+        descricao: "Comedy track in which the protagonist goes to school and starts realizing the cultural differences between him and others.",
         audio: "../assets/audio/1m03_Jazz_mixv2.mp3"
     },
     {
         id: 2,
         titulo: "Struggle",
-        descricao: "lorem ipsum",
+        descricao: "Track that follows the main character as he struggles to assemble his camera.",
         audio: "../assets/audio/UPTB_1m04_Struggle.mp3"
     },
     {
         id: 3,
         titulo: "Weird Message",
-        descricao: "lorem ipsum",
+        descricao: "The first time the protagonist receives USA span messages as he lays down in his bed.",
         audio: "../assets/audio/1m05_WeirdMessage_Mixv2.mp3"
     }
 ];

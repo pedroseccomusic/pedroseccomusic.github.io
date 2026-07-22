@@ -26,7 +26,6 @@ html {
     --begezinho: #f3eed9;
 }
 
-/* reset básico de navegador */
 * {
     margin: 0;
     padding: 0;
@@ -233,6 +232,7 @@ header {
     width: 100%;
     margin-top: 1rem;
     outline: none;
+    filter: sepia(80%) hue-rotate(-65deg) saturate(170%);
 }
 
 .imagem-partitura {
@@ -527,4 +527,14 @@ header {
     text-align: center;
     padding: 1.5rem 0;
     font-size: 0.9rem;
+}
+
+.rodape p {
+    margin-bottom: 0.5rem; 
+    font-size: 0.95rem;
+}
+
+.credito-dev {
+    font-size: 0.8rem !important;
+    color: rgba(243, 238, 217, 0.4); 
 }
