@@ -3,17 +3,17 @@ const iniciarSlideshow = () => {
     if (!container) return;
 
     const fotos = [
-        "../assets/photos/23.jpg",
-        "../assets/photos/1.JPG",
-        "../assets/photos/18.jpg",
-        "../assets/photos/21.jpg",
-        "../assets/photos/11.JPG",
-        "../assets/photos/19.jpg",
-        "../assets/photos/3.jpg",
-        "../assets/photos/13.jpg",
-        "../assets/photos/22.jpg",
-        "../assets/photos/14.jpg",
-        "../assets/photos/12.jpg"
+        "assets/photos/23.jpg",
+        "assets/photos/1.JPG",
+        "assets/photos/18.jpg",
+        "assets/photos/21.jpg",
+        "assets/photos/11.JPG",
+        "assets/photos/19.jpg",
+        "assets/photos/3.jpg",
+        "assets/photos/13.jpg",
+        "assets/photos/22.jpg",
+        "assets/photos/14.jpg",
+        "assets/photos/12.jpg"
     ];
 
     fotos.forEach((foto, index) => {
@@ -43,9 +43,9 @@ const arranjosData = [
         In this chart, the song was arranged for string quintet plus piccolo and oboe.
         Live recorded at Berklee Studio 3 by an ensemble of professional musicians hired by
         the school.`,
-        thumb: "../assets/thumb/Desolee_FullScore/1.png",
-        pdf: "../assets/score/Desolee_FullScore.pdf",
-        audio: "../assets/audio/Desolee_Master.mp3",
+        thumb: "assets/thumb/Desolee_FullScore/1.png",
+        pdf: "assets/score/Desolee_FullScore.pdf",
+        audio: "assets/audio/Desolee_Master.mp3",
         video: "" 
     },
     {
@@ -56,9 +56,9 @@ const arranjosData = [
         taking care of her hydrangeas, while she struggles to let go of her most obsessive and traumatic thoughts.
         It was recorded in May 2026, at Futura Productions, in Roslindale, M, by a chamber orchestra formed by
         professional orchestral musicians hired by Berklee.`,
-        thumb: "../assets/thumb/Hortensias_FullScore/1.png",
-        pdf: "../assets/score/Hortensias_FullScore.pdf",
-        audio: "../assets/audio/Hortensias_Rec.mp3",
+        thumb: "assets/thumb/Hortensias_FullScore/1.png",
+        pdf: "assets/score/Hortensias_FullScore.pdf",
+        audio: "assets/audio/Hortensias_Rec.mp3",
         video: ""
     },
     {
@@ -68,8 +68,8 @@ const arranjosData = [
         A Night In Brazil, which took place at the Berklee Performance Center in February 2025. This concert was
         the very first student-led show exclusively dedicated towards Brazilian music on the BPC, and Secco was
         the co-music director of the project.`,
-        thumb: "../assets/thumb/QUI_NEM_JILO_Score/1.png",
-        pdf: "../assets/score/QUI_NEM_JILO_Score.pdf",
+        thumb: "assets/thumb/QUI_NEM_JILO_Score/1.png",
+        pdf: "assets/score/QUI_NEM_JILO_Score.pdf",
         audio: "",
         video: "https://www.youtube.com/embed/1lsneH77xWA?si=AKyKqAyuzK2XirEc"  
     },
@@ -80,9 +80,9 @@ const arranjosData = [
         The ensemble had seven singers (Soprano, 2 Alto, 2 Tenor, Baritone, Bass). It was the final project of the
         class Vocal Writing at Berklee College of Music. This recording consists of a demo, with the bass being a regular
         MIDI sampled instrument.`,
-        thumb: "../assets/thumb/PedroSecco_Borzerguim/1.png",
-        pdf: "../assets/score/PedroSecco_Borzerguim.pdf",
-        audio: "../assets/audio/VocalWriting_Borzeguim.mp3",
+        thumb: "assets/thumb/PedroSecco_Borzerguim/1.png",
+        pdf: "assets/score/PedroSecco_Borzerguim.pdf",
+        audio: "assets/audio/VocalWriting_Borzeguim.mp3",
         video: "" 
     },
     {
@@ -91,9 +91,9 @@ const arranjosData = [
         descricao: `Lost by Wayne Shorter, arranged for 8-5-4 Big Band Ensemble. This chart was written as the final
         project for Writing for Big Band class at Berklee College of Music. Live recorded by an ensemble formed by
         fellow Berklee students.`,
-        thumb: "../assets/thumb/Lost_Final_FullScore/1.png",
-        pdf: "../assets/score/Lost_Final_FullScore.pdf",
-        audio: "../assets/audio/Lost_PedroSecco.mp3",  
+        thumb: "assets/thumb/Lost_Final_FullScore/1.png",
+        pdf: "assets/score/Lost_Final_FullScore.pdf",
+        audio: "assets/audio/Lost_PedroSecco.mp3",  
         video: ""
     },
     {
@@ -104,8 +104,8 @@ const arranjosData = [
         Homem com H, and América do Sul. The arrangement aimed to capture the contrast between the first song 
         – intimate, dramatic, sad – to the last song, which is a festive celebration of South America. The piece was sung by
         Brazilian singer Jade Faria, backed up by a brass and strings orchestra of more than 40 musicians.`,
-        thumb: "../assets/thumb/SCORE_NeyMedley_V4/1.png",
-        pdf: "../assets/score/SCORE_NeyMedley_V4.pdf",
+        thumb: "assets/thumb/SCORE_NeyMedley_V4/1.png",
+        pdf: "assets/score/SCORE_NeyMedley_V4.pdf",
         audio: "", 
         video: "https://vimeo.com/showcase/9726865?video=1171103863#t=47m11s"
     }
@@ -241,19 +241,19 @@ const libraryData = [
         id: 1,
         titulo: "Tension",
         descricao: "This cue was written to represent a moment of extreme tension/suspense on a TV show.",
-        audio: "../assets/audio/MenegattiSecco_Tension.mp3"
+        audio: "assets/audio/MenegattiSecco_Tension.mp3"
     },
     {
         id: 2,
         titulo: "The Breakup",
         descricao: "This cue is meant to represent a moment of deep sadness that follows a breakup.",
-        audio: "../assets/audio/MenegattiSecco_TheBreakup_Full.mp3"
+        audio: "assets/audio/MenegattiSecco_TheBreakup_Full.mp3"
     },
     {
         id: 3,
         titulo: "The Breakup (Lite Version)",
         descricao: "Less dense version of 'The Breakup'",
-        audio: "../assets/audio/MenegattiSecco_TheBreakup_AltLite.mp3"
+        audio: "assets/audio/MenegattiSecco_TheBreakup_AltLite.mp3"
     }
     /*{
         id: 4,
@@ -291,19 +291,19 @@ const uptbData = [
         id: 1,
         titulo: "Jazz",
         descricao: "Comedy track in which the protagonist goes to school and starts realizing the cultural differences between him and others.",
-        audio: "../assets/audio/1m03_Jazz_mixv2.mp3"
+        audio: "assets/audio/1m03_Jazz_mixv2.mp3"
     },
     {
         id: 2,
         titulo: "Struggle",
         descricao: "Track that follows the main character as he struggles to assemble his camera.",
-        audio: "../assets/audio/UPTB_1m04_Struggle.mp3"
+        audio: "assets/audio/UPTB_1m04_Struggle.mp3"
     },
     {
         id: 3,
         titulo: "Weird Message",
         descricao: "The first time the protagonist receives USA span messages as he lays down in his bed.",
-        audio: "../assets/audio/1m05_WeirdMessage_Mixv2.mp3"
+        audio: "assets/audio/1m05_WeirdMessage_Mixv2.mp3"
     }
 ];
 
