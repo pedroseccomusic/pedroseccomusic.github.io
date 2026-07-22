@@ -396,12 +396,18 @@ header {
 }
 
 @media (max-width: 768px) {
-    .video-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.5rem;
+    .grid-videos {
+        grid-template-columns: 1fr; 
+        padding: 1rem; 
+        gap: 2rem; 
     }
-    
+
+    .video-card {
+        width: 100%;
+        margin: 0;
+        padding: 0; 
+    }
+   
 }
 
 
